@@ -10,8 +10,8 @@ class Router {
 
     login(app, db)
     {
-        app.post('/login',(req, res) 
-        {   let username = req.body.username;
+        app.post('/login',(req, res)  => 
+        {  let username = req.body.username;
             let password = req.body.password;
 
             username = username.toLowerCase();
@@ -75,7 +75,7 @@ class Router {
 
     });
     
-    
+    }
 
     logout(app, db)
     {
@@ -128,7 +128,7 @@ class Router {
                     })
                 }
         
-            });
+          });
 
         }
 
@@ -138,6 +138,8 @@ class Router {
             })
         }
     });   
-}
 
-module.exports = Router; 
+
+module.exports = Router;
+  }
+}
